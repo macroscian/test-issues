@@ -1,0 +1,13 @@
+name: Blocking Issues
+
+on:
+  issues:
+    types: [closed]
+  workflow_dispatch:
+
+jobs:
+  blocking_issues:
+    runs-on: ubuntu-latest
+    name: Checks for blocking issues
+    steps:
+      - uses: macroscian/blocking-issues@main

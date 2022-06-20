@@ -1,0 +1,14 @@
+on:
+  push:
+    paths:
+      - readme.md
+      - .babs
+name: Update README with metadata
+jobs:
+  render:
+    name: Render readme.md
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Insert BABS file
+        run: bash .github/scripts/babs2readme.sh

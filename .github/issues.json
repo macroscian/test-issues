@@ -1,0 +1,50 @@
+{"issues" :[
+    {"title": "Respond to ticket",
+     "body": "Respond to scientist about ticket, and set up process to get BABS approval",
+     "milestone": "Planning",
+     "labels": ["Management"],
+     "assignees": ["macroscian"]
+    },
+    {"title": "BABS Approval",
+     "body": "Ensure that the work is achievable with the resources we have. Assign staff members to the remaining tasks as appropriate.",
+     "milestone": "Planning",
+     "labels": ["Management"],
+     "assignees": ["macroscian"],
+     "deps":["Respond to ticket"]
+    },
+    {"title": "Await Data",
+     "body": "Await Data",
+     "milestone": "Planning",
+     "labels": ["External"],
+     "assignees": [],
+     "deps":["BABS Approval"]},
+    {"title":"First-Pass Analysis",
+     "body":"First-Pass Analysis",
+     "milestone":"Analysis",
+     "labels": ["Analyst"],
+     "assignees": [],
+     "deps": ["Await Data"]},
+    {"title":"Bespoke Analysis",
+     "body":"Bespoke Analysis",
+     "milestone":"Analysis",
+     "labels": ["Analyst"],
+     "assignees": [],
+     "deps":["Await Data"]},
+    {"title":"Finish",
+     "body":"Finish",
+     "milestome":"Completion",
+     "labels":["Analyst"],
+     "assignees": [],
+     "deps": ["First-Pass Analysis",
+	      "Bespoke Analysis"]
+    }
+],
+ "milestones": [
+     {"title": "Planning",
+      "description": "From ticket to data arrival"
+     },
+     {"title": "Analysis",
+      "description": "Analysis"
+     }
+ ]
+}
