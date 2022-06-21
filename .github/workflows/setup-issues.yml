@@ -12,5 +12,3 @@ jobs:
     uses: macroscian/macroscian-issue-workflow/.github/workflows/setup-issues.yml@main
     with:
       json: .github/issues.json
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
