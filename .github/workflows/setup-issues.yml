@@ -15,5 +15,3 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:
       json: .github/issues.json
-    steps:
-      - uses: actions/checkout@v2
