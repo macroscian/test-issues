@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: macroscian/create-issues@v2.6.20
+      - uses: macroscian/macroscian-issue-workflow/.github/workflows/setup-issues.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
