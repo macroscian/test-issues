@@ -9,6 +9,11 @@ permissions:
   issues: write 
 jobs:
   create:
-    uses: macroscian/macroscian-issue-workflow/.github/workflows/setup-issues.yml@main
-    with:
-      json: .github/issues.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: macroscian/macroscian-issue-workflow/create-issues@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          json: .github/issues.json
